@@ -45,6 +45,10 @@ public class Module {
         hash = 59 * hash + Objects.hashCode(this.lecturer);
         return hash;
     }
+    
+    public ArrayList<Student> getStudents() {
+        return this.students;
+    }
 
     public void addStudents(ArrayList<Student> students) {
         for (Student x : students) {
@@ -56,6 +60,10 @@ public class Module {
         for (Student x : students) {
             this.students.removeIf(test -> test.getID() == x.getID());
         }
+    }
+    
+    public ArrayList<Course> getCourses() {
+        return this.courses;
     }
     
     public void addCourses(ArrayList<Course> courses) {

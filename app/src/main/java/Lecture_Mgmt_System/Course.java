@@ -64,6 +64,10 @@ public class Course {
         this.endDate = end;
     }
     
+    public ArrayList<Student> getStudents() {
+        return this.students;
+    }
+    
     public void addStudents(ArrayList<Student> students) {
         for (Student x : students) {
             this.students.add(x);
@@ -75,7 +79,11 @@ public class Course {
             this.students.removeIf(test -> test.getID() == x.getID());
         }
     }
-
+    
+    public ArrayList<Module> getModules() {
+        return this.modules;
+    }
+    
     public void addModules(ArrayList<Module> modules) {
         for (Module x : modules) {
             this.modules.add(x);
