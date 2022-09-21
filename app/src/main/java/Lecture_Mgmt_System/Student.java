@@ -92,6 +92,10 @@ public class Student {
         this.id = id;
     }
     
+    public ArrayList<Course> getCourses() {
+        return this.courses;
+    }
+    
     public void addCourses(ArrayList<Course> courses) {
         for (Course x : courses) {
             this.courses.add(x);
@@ -102,6 +106,10 @@ public class Student {
         for (Course x : courses) {
             this.courses.removeIf(test -> test.getName().equals(x.getName()));
         }
+    }
+    
+    public ArrayList<Module> getModules() {
+        return this.modules;
     }
     
     public void addModules(ArrayList<Module> modules) {
