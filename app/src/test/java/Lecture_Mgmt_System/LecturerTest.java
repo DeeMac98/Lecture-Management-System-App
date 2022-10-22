@@ -55,8 +55,9 @@ public class LecturerTest {
     @Order(1)    
     public void testCreateID() {
         System.out.println("createID");
-        int expResult = 4;
+        int expResult = 2;
         int result = Lecturer.createID();
+        System.out.println(result);
         assertTrue(expResult == result);
     }
 
